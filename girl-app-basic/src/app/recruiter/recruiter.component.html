@@ -1,0 +1,21 @@
+<div class="row">
+  <div class="col-xs-12">
+    <p>Add new Girl to one of the team!</p>
+    <label>Girl Name</label>
+    <input type="text" class="form-control" [(ngModel)]="newGirlName">
+    <label>Biography</label>
+    <input type="text" class="form-control" [(ngModel)]="newGirlBio">
+    <br>
+  <div class="btn-toolbar">
+    <button
+      class="btn btn-primary"
+      (click)="onAddBlond()">Add Blond</button>
+    <button
+      class="btn btn-primary"
+      (click)="onAddRed()">Add Red</button>
+    <button
+      class="btn btn-primary"
+      (click)="onAddBrun()">Add Brunette</button>
+    </div>
+  </div>
+</div>

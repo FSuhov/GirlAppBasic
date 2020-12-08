@@ -1,0 +1,18 @@
+<div class="panel panel-default">
+  <div class="panel-heading">{{girl.name}}</div>
+    <div class="panel-body" *ngIf="girl.type==='blond'" style="background-color: grey;">
+      <p>
+        <strong style="color:yellow">{{girl.bio}}</strong>        
+      </p>
+    </div>  
+    <div class="panel-body" *ngIf="girl.type==='red'" style="background-color: lightcyan;">
+      <p>        
+        <strong *ngIf="girl.type==='red'" style="color:red">{{girl.bio}}</strong>        
+      </p>
+    </div>  
+    <div class="panel-body" *ngIf="girl.type==='brun'" style="background-color: lightsalmon;">
+      <p>        
+        <strong *ngIf="girl.type==='brun'" style="color: brown">{{girl.bio}}</strong>
+      </p>
+    </div>  
+</div>

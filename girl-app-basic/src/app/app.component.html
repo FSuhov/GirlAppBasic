@@ -1,0 +1,13 @@
+<div class="container">
+    <app-recruiter 
+      (blondHired)="onBlondAdded($event)"
+      (redHired)="onRedAdded($event)"
+      (brunHired)="onBrunAdded($event)"></app-recruiter>
+    <hr/>
+    <div class="row">
+        <div class="col-xs-12">
+            <app-girl *ngFor="let item of girls"
+            [girl]="item"></app-girl>
+        </div>
+    </div>
+</div>
