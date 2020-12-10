@@ -6,7 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  girls = []
+  girls = []  
+  oddNumbers: number[] = [];
+  evenNumbers: number[] = [];
 
   onBlondAdded(girlData:{girlName:string, girlBio:string}){
     this.girls.push({
@@ -28,5 +30,14 @@ export class AppComponent {
       name: girlData.girlName,
       bio: girlData.girlBio
     });
+  }
+
+  onStartGame(num: number){
+    if(num % 2 == 0){
+      this.evenNumbers.push(num);      
+    }
+    else{
+      this.oddNumbers.push(num);
+    }      
   }
 }

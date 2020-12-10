@@ -11,3 +11,20 @@
         </div>
     </div>
 </div>
+<hr/>
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+            <app-gamecontrol
+            (throwNumber)="onStartGame($event)"
+            ></app-gamecontrol>
+        </div>
+        <hr/>
+        <div class="col-xs-12">
+            <app-odd *ngFor="let item of oddNumbers"
+            [num]="item"></app-odd>
+            <app-even *ngFor="let item of evenNumbers"
+            [num]="item"></app-even>
+        </div>
+    </div>
+</div>
