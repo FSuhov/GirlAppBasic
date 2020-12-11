@@ -7,23 +7,23 @@ import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 })
 export class GamecontrolComponent implements OnInit {
   @Output() throwNumber = new EventEmitter<number>();
-  interval; 
-  
-  
+  interval;
+
+
   constructor() { }
 
   ngOnInit() {
   }
 
   onStartGame(){
-    this.interval = setInterval((event:any) =>{
+    this.interval = setInterval(() =>{
       let rndNumber = Math.floor((Math.random() * 10) + 1);
-      console.log(rndNumber);      
+      console.log(rndNumber);
       this.throwNumber.emit(rndNumber)
-    }, 2000); 
+    }, 2000);
   }
-  onStopGame(){  
-    clearInterval(this.interval);  
+  onStopGame(){
+    clearInterval(this.interval);
   }
 
   emitNumber(){
@@ -31,5 +31,5 @@ export class GamecontrolComponent implements OnInit {
     console.log(rndNumber);
     this.throwNumber.emit(rndNumber);
   }
-  
+
 }
